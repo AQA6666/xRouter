@@ -40,26 +40,24 @@ class ModelConfig:
 # Model configurations
 MODEL_CONFIGS = {
     # OpenAI models
-    "gpt-4o": ModelConfig("openai", "gpt-4o", 128000, 0.0025, 0.010),
-    "gpt-4o-mini": ModelConfig("openai", "gpt-4o-mini", 128000, 0.00015, 0.00060),
-    "gpt-4.1": ModelConfig("openai", "gpt-4.1", 1047576, 0.002, 0.008),
-    "gpt-4.1-mini": ModelConfig("openai", "gpt-4.1-mini", 1047576, 0.00040, 0.00160),
-    "gpt-4.1-nano": ModelConfig("openai", "gpt-4.1-nano", 1047576, 0.00010, 0.00140),
-    "o3": ModelConfig("openai", "o3", 200000, 0.002, 0.008),
-    "o3-pro": ModelConfig("openai", "o3-pro", 200000, 0.020, 0.080),
-    "o4-mini": ModelConfig("openai", "o4-mini", 200000, 0.00110, 0.00440),
+    "gpt-4o": ModelConfig("dmxapi", "gpt-4o", 128000, 0.0025, 0.010),
+    "gpt-4o-mini": ModelConfig("dmxapi", "gpt-4o-mini", 128000, 0.00015, 0.00060),
+    "gpt-4.1": ModelConfig("dmxapi", "gpt-4.1", 1047576, 0.002, 0.008),
+    "gpt-4.1-mini": ModelConfig("dmxapi", "gpt-4.1-mini", 1047576, 0.00040, 0.00160),
+    "gpt-4.1-nano": ModelConfig("dmxapi", "gpt-4.1-nano", 1047576, 0.00010, 0.00140),
+    "o3": ModelConfig("dmxapi", "o3", 200000, 0.002, 0.008),
+    "o3-pro": ModelConfig("dmxapi", "o3-pro", 200000, 0.020, 0.080),
+    "o4-mini": ModelConfig("dmxapi", "o4-mini", 200000, 0.00110, 0.00440),
     
     # Together AI models
-    "Qwen/Qwen3-235B-A22B-Instruct-2507-tput": ModelConfig("together", "Qwen/Qwen3-235B-A22B-Instruct-2507-tput", 262144, 0.20/1000, 0.60/1000),
-    "Qwen/Qwen3-235B-A22B-Thinking-2507": ModelConfig("together", "Qwen/Qwen3-235B-A22B-Thinking-2507", 262144, 0.65/1000, 3.00/1000),
-    "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": ModelConfig("together", "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8", 262144, 2.00/1000, 2.00/1000),
-    "Qwen/Qwen2.5-72B-Instruct-Turbo": ModelConfig("together", "Qwen/Qwen2.5-72B-Instruct-Turbo", 131072, 1.20/1000, 1.20/1000),
-    "Qwen/Qwen2.5-7B-Instruct-Turbo": ModelConfig("together", "Qwen/Qwen2.5-7B-Instruct-Turbo", 32768, 0.30/1000, 0.30/1000),
-    "Qwen/Qwen2.5-Coder-32B-Instruct": ModelConfig("together", "Qwen/Qwen2.5-Coder-32B-Instruct", 32768, 0.80/1000, 0.80/1000),
-    "moonshotai/Kimi-K2-Instruct": ModelConfig("together", "moonshotai/Kimi-K2-Instruct", 131072, 1.00/1000, 3.00/1000),
-    "deepseek-ai/DeepSeek-R1": ModelConfig("together", "deepseek-ai/DeepSeek-R1", 163840, 3.00/1000, 7.00/1000),
-    "deepseek-ai/DeepSeek-R1-0528-tput": ModelConfig("together", "deepseek-ai/DeepSeek-R1-0528-tput", 163840, 0.55/1000, 2.19/1000),
-    "deepseek-ai/DeepSeek-V3": ModelConfig("together", "deepseek-ai/DeepSeek-V3", 131072, 1.25/1000, 1.25/1000),
+    "Qwen/Qwen3-235B-A22B-Instruct-2507-tput": ModelConfig("dmxapi", "qwen3-235b-a22b-instruct-2507", 262144, 0.20/1000, 0.60/1000),
+    "Qwen/Qwen3-235B-A22B-Thinking-2507": ModelConfig("dmxapi", "qwen3-235b-a22b-thinking-2507", 262144, 0.65/1000, 3.00/1000),
+    "Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8": ModelConfig("dmxapi", "qwen3-coder-480b-a35b-instruct", 262144, 2.00/1000, 2.00/1000),
+    "Qwen/Qwen2.5-72B-Instruct-Turbo": ModelConfig("dmxapi", "qwen2.5-72b-instruct", 131072, 1.20/1000, 1.20/1000),
+    "Qwen/Qwen2.5-7B-Instruct-Turbo": ModelConfig("dmxapi", "qwen2.5-32b-instruct", 32768, 0.60/1000, 0.60/1000),
+    "moonshotai/Kimi-K2-Instruct": ModelConfig("dmxapi", "kimi-k2-0905-preview", 131072, 1.00/1000, 3.00/1000),
+    "deepseek-ai/DeepSeek-R1": ModelConfig("dmxapi", "deepseek-r1-0528", 163840, 3.00/1000, 7.00/1000),
+    "deepseek-ai/DeepSeek-V3": ModelConfig("dmxapi", "DMXAPI-HuoShan-DeepSeek-V3", 131072, 1.25/1000, 1.25/1000),
 }
 
 class RateLimiter:
@@ -99,22 +97,20 @@ class APIModelInterface:
         self.total_cost = 0.0
         
         # Initialize API clients
-        if self.config.provider == "openai":
-            api_key = os.getenv("OPENAI_API_KEY")
+        if self.config.provider == "dmxapi":
+            api_key = os.getenv("DMXAPI_KEY")
             if not api_key:
-                raise ValueError("OPENAI_API_KEY environment variable not set")
-            self.client = openai.OpenAI(api_key=api_key)
-            
-        elif self.config.provider == "together":
-            api_key = os.getenv("TOGETHER_API_KEY") 
-            if not api_key:
-                raise ValueError("TOGETHER_API_KEY environment variable not set")
-            self.together_api_key = api_key
-            self.together_base_url = "https://api.together.xyz/v1/chat/completions"
+                raise ValueError("DMXAPI_KEY environment variable not set")
+            self.client = openai.OpenAI(api_key=api_key, base_url="https://www.dmxapi.cn/v1")
     
     def get_column_name(self) -> str:
         """Generate appropriate column name for pass rates"""
         if self.config.provider == "openai":
+            # gpt-4o -> gpt4o_pass_rate
+            # gpt-4.1-mini -> gpt41_mini_pass_rate
+            clean_name = self.model_name.replace("-", "_").replace(".", "")
+            return f"{clean_name}_pass_rate"
+        elif self.config.provider == "dmxapi":
             # gpt-4o -> gpt4o_pass_rate
             # gpt-4.1-mini -> gpt41_mini_pass_rate
             clean_name = self.model_name.replace("-", "_").replace(".", "")
@@ -153,6 +149,36 @@ class APIModelInterface:
             
         except Exception as e:
             console.print(f"[red]OpenAI API error: {e}[/red]")
+            # Return empty responses to match expected count
+            return [""] * sampling_params.get("n", 1)
+
+    def _call_dmx_api(self, prompt: str, sampling_params: Dict[str, Any]) -> List[str]:
+        """Call DMX API"""
+        self.rate_limiter.acquire()
+        
+        try:
+            response = self.client.chat.completions.create(
+                model=self.config.model_id,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=sampling_params.get("max_tokens", 2048),
+                temperature=sampling_params.get("temperature", 1.0),
+                top_p=sampling_params.get("top_p", 1.0),
+                n=sampling_params.get("n", 1),
+            )
+            
+            # Track usage
+            usage = response.usage
+            self.total_input_tokens += usage.prompt_tokens
+            self.total_output_tokens += usage.completion_tokens
+            
+            input_cost = usage.prompt_tokens * self.config.input_price_per_1k / 1000
+            output_cost = usage.completion_tokens * self.config.output_price_per_1k / 1000
+            self.total_cost += input_cost + output_cost
+            
+            return [choice.message.content for choice in response.choices]
+            
+        except Exception as e:
+            console.print(f"[red]DMX API error: {e}[/red]")
             # Return empty responses to match expected count
             return [""] * sampling_params.get("n", 1)
     
@@ -214,6 +240,11 @@ class APIModelInterface:
                     future = executor.submit(self._call_openai_api, prompt, sampling_params)
                 elif self.config.provider == "together":
                     future = executor.submit(self._call_together_api, prompt, sampling_params)
+                elif self.config.provider == "dmxapi":
+                    future = executor.submit(self._call_dmx_api, prompt, sampling_params)
+                else:
+                    raise ValueError(f"Unsupported provider: {self.config.provider}")
+                
                 future_to_prompt[future] = (i, prompt)
             
             # Collect results in order

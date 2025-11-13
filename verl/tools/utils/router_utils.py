@@ -71,7 +71,7 @@ MODEL_SPECS = {
     "gpt-5": ModelSpec(
         name="GPT-5",
         api_alias="gpt-5",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=1.25,
         output_price_per_million=10.00,
         context_window=400000,
@@ -106,7 +106,7 @@ MODEL_SPECS = {
     "gpt-5-mini": ModelSpec(
         name="GPT-5 Mini",
         api_alias="gpt-5-mini", 
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=0.25,
         output_price_per_million=2.00,
         context_window=400000,
@@ -133,7 +133,7 @@ MODEL_SPECS = {
     "gpt-5-nano": ModelSpec(
         name="GPT-5 Nano",
         api_alias="gpt-5-nano",
-        provider="openai", 
+        provider="dmxapi", 
         input_price_per_million=0.05,
         output_price_per_million=0.40,
         context_window=400000,
@@ -158,7 +158,7 @@ MODEL_SPECS = {
     "gpt-4o": ModelSpec(
         name="GPT-4o (Omni)",
         api_alias="gpt-4o",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=2.50,
         output_price_per_million=10.00,
         context_window=128000,
@@ -187,7 +187,7 @@ MODEL_SPECS = {
     "gpt-4o-mini": ModelSpec(
         name="GPT-4o Mini",
         api_alias="gpt-4o-mini",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=0.15,
         output_price_per_million=0.60,
         context_window=128000,
@@ -216,7 +216,7 @@ MODEL_SPECS = {
     "gpt-4.1": ModelSpec(
         name="GPT-4.1",
         api_alias="gpt-4.1",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=2.00,
         output_price_per_million=8.00,
         context_window=1047576,
@@ -252,7 +252,7 @@ MODEL_SPECS = {
     "gpt-4.1-mini": ModelSpec(
         name="GPT-4.1 Mini",
         api_alias="gpt-4.1-mini",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=0.40,
         output_price_per_million=1.60,
         context_window=1047576,
@@ -283,7 +283,7 @@ MODEL_SPECS = {
     "gpt-4.1-nano": ModelSpec(
         name="GPT-4.1 Nano",
         api_alias="gpt-4.1-nano",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=0.10,
         output_price_per_million=1.40,
         context_window=1047576,
@@ -312,7 +312,7 @@ MODEL_SPECS = {
     "o3": ModelSpec(
         name="o3",
         api_alias="o3",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=2.00,
         output_price_per_million=8.00,
         context_window=200000,
@@ -378,7 +378,7 @@ MODEL_SPECS = {
     "o4-mini": ModelSpec(
         name="o4 Mini",
         api_alias="o4-mini",
-        provider="openai",
+        provider="dmxapi",
         input_price_per_million=1.10,
         output_price_per_million=4.40,
         context_window=200000,
@@ -413,8 +413,8 @@ MODEL_SPECS = {
     # Together AI Models
     "gpt-oss-120b": ModelSpec(
         name="GPT-OSS 120B",
-        api_alias="together_ai/openai/gpt-oss-120b",
-        provider="together",
+        api_alias="gpt-oss-120b",
+        provider="dmxapi",
         input_price_per_million=0.15,
         output_price_per_million=0.60,
         context_window=131072,
@@ -441,8 +441,8 @@ MODEL_SPECS = {
     ),
     "gpt-oss-20b": ModelSpec(
         name="GPT-OSS 20B",
-        api_alias="together_ai/openai/gpt-oss-20b",
-        provider="together",
+        api_alias="gpt-oss-20b",
+        provider="dmxapi",
         input_price_per_million=0.05,
         output_price_per_million=0.20,
         context_window=131072,
@@ -469,8 +469,8 @@ MODEL_SPECS = {
     ),
     "qwen3-235b-instruct": ModelSpec(
         name="Qwen3 235B Instruct",
-        api_alias="together_ai/Qwen/Qwen3-235B-A22B-Instruct-2507-tput",
-        provider="together",
+        api_alias="qwen3-235b-a22b-instruct-2507",
+        provider="dmxapi",
         input_price_per_million=0.20,
         output_price_per_million=0.60,
         context_window=262144,
@@ -502,8 +502,8 @@ MODEL_SPECS = {
     
     "qwen3-235b-thinking": ModelSpec(
         name="Qwen3 235B Thinking",
-        api_alias="together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507",
-        provider="together",
+        api_alias="qwen3-235b-a22b-thinking-2507",
+        provider="dmxapi",
         input_price_per_million=0.65,
         output_price_per_million=3.00,
         context_window=262144,
@@ -533,8 +533,8 @@ MODEL_SPECS = {
     
     "qwen3-coder-480b": ModelSpec(
         name="Qwen3 Coder 480B",
-        api_alias="together_ai/Qwen/Qwen3-Coder-480B-A35B-Instruct-FP8",
-        provider="together",
+        api_alias="qwen3-coder-480b-a35b-instruct",
+        provider="dmxapi",
         input_price_per_million=2.00,
         output_price_per_million=2.00,
         context_window=262144,
@@ -623,8 +623,8 @@ MODEL_SPECS = {
     
     "kimi-k2": ModelSpec(
         name="Kimi K2 Instruct",
-        api_alias="together_ai/moonshotai/Kimi-K2-Instruct",
-        provider="together",
+        api_alias="kimi-k2-0905-preview",
+        provider="dmxapi",
         input_price_per_million=1.00,
         output_price_per_million=3.00,
         context_window=131072,
@@ -656,8 +656,8 @@ MODEL_SPECS = {
     
     "deepseek-r1": ModelSpec(
         name="DeepSeek R1",
-        api_alias="together_ai/deepseek-ai/DeepSeek-R1",
-        provider="together",
+        api_alias="DMXAPI-HuoShan-DeepSeek-R1-671B-64k",
+        provider="dmxapi",
         input_price_per_million=3.00,
         output_price_per_million=7.00,
         context_window=163840,
@@ -687,31 +687,31 @@ MODEL_SPECS = {
         - LMSYS Arena Elo: 1394"""
     ),
     
-    "deepseek-r1-tput": ModelSpec(
-        name="DeepSeek R1 Throughput",
-        api_alias="together_ai/deepseek-ai/DeepSeek-R1-0528-tput",
-        provider="together",
-        input_price_per_million=0.55,
-        output_price_per_million=2.19,
-        context_window=163840,
-        max_output_tokens=131072,
-        capabilities=["reasoning", "math", "science", "thinking"],
-        quality_tier="standard",
-        description="""High-throughput version of DeepSeek R1 with optimized cost.
+    # "deepseek-r1-tput": ModelSpec(
+    #     name="DeepSeek R1 Throughput",
+    #     api_alias="together_ai/deepseek-ai/DeepSeek-R1-0528-tput",
+    #     provider="together",
+    #     input_price_per_million=0.55,
+    #     output_price_per_million=2.19,
+    #     context_window=163840,
+    #     max_output_tokens=131072,
+    #     capabilities=["reasoning", "math", "science", "thinking"],
+    #     quality_tier="standard",
+    #     description="""High-throughput version of DeepSeek R1 with optimized cost.
         
-        Capabilities: Reasoning, mathematics, science with optimized speed
-        Quality: Standard tier with better cost-performance
-        Cost: $0.55/M input tokens, $2.19/M output tokens
-        Context: 163,840 tokens
-        Max Output: 131,072 tokens
+    #     Capabilities: Reasoning, mathematics, science with optimized speed
+    #     Quality: Standard tier with better cost-performance
+    #     Cost: $0.55/M input tokens, $2.19/M output tokens
+    #     Context: 163,840 tokens
+    #     Max Output: 131,072 tokens
         
-        Best for: Scaling reasoning tasks that require good performance at a lower cost, particularly for mathematical problems where speed and cost are key factors.
+    #     Best for: Scaling reasoning tasks that require good performance at a lower cost, particularly for mathematical problems where speed and cost are key factors.
 
-        Note: Thinking model requires high token limits (8192+) to account for internal reasoning.
+    #     Note: Thinking model requires high token limits (8192+) to account for internal reasoning.
         
-        Benchmark Performance:
-        - Performance metrics are not publicly available for this throughput-optimized variant of DeepSeek R1."""
-    ),
+    #     Benchmark Performance:
+    #     - Performance metrics are not publicly available for this throughput-optimized variant of DeepSeek R1."""
+    # ),
     
     # "deepseek-v3": ModelSpec(
     #     name="DeepSeek V3",
@@ -744,68 +744,68 @@ MODEL_SPECS = {
     # ),
     
     # Google Gemini Models
-    # "gemini-2.5-pro": ModelSpec(
-    #     name="Gemini 2.5 Pro",
-    #     api_alias="gemini/gemini-2.5-pro",
-    #     provider="google",
-    #     input_price_per_million=1.25,  # ≤200K tokens, $2.50 for >200K
-    #     output_price_per_million=10.00,  # ≤200K tokens, $15.00 for >200K
-    #     context_window=1048576,  # 1M tokens
-    #     max_output_tokens=65535,
-    #     capabilities=["reasoning", "coding", "math", "general", "multimodal", "long_context", "thinking"],
-    #     quality_tier="premium",
-    #     description="""Google's most advanced model with elite reasoning, controllable "thinking" capabilities, and a massive context window.
+    "gemini-2.5-pro": ModelSpec(
+        name="Gemini 2.5 Pro",
+        api_alias="gemini-2.5-pro",
+        provider="dmxapi",
+        input_price_per_million=1.25,  # ≤200K tokens, $2.50 for >200K
+        output_price_per_million=10.00,  # ≤200K tokens, $15.00 for >200K
+        context_window=1048576,  # 1M tokens
+        max_output_tokens=65535,
+        capabilities=["reasoning", "coding", "math", "general", "multimodal", "long_context", "thinking"],
+        quality_tier="premium",
+        description="""Google's most advanced model with elite reasoning, controllable "thinking" capabilities, and a massive context window.
         
-    #     Capabilities: Advanced reasoning, coding, math, general, multimodal, long context, thinking
-    #     Quality: Premium tier with thinking capabilities
-    #     Cost: $1.25/M input tokens, $10.00/M output tokens (≤200K), higher for >200K
-    #     Context: 1,048,576 tokens (~1M tokens)
-    #     Max Output: 65,535 tokens
+        Capabilities: Advanced reasoning, coding, math, general, multimodal, long context, thinking
+        Quality: Premium tier with thinking capabilities
+        Cost: $1.25/M input tokens, $10.00/M output tokens (≤200K), higher for >200K
+        Context: 1,048,576 tokens (~1M tokens)
+        Max Output: 65,535 tokens
         
-    #     Best for: Frontier reasoning tasks, deep analysis of long documents or codebases, and complex multimodal applications requiring the highest quality.
+        Best for: Frontier reasoning tasks, deep analysis of long documents or codebases, and complex multimodal applications requiring the highest quality.
         
-    #     Note: Thinking model requires high token limits (8192+) to account for internal reasoning.
+        Note: Thinking model requires high token limits (8192+) to account for internal reasoning.
         
-    #     Benchmark Performance (Thinking mode):
-    #     - GPQA Diamond: 86.4%
-    #     - AIME 2025: 88.0%
-    #     - LiveCodeBench: 69.0%
-    #     - SWE-bench Verified (single attempt): 59.6%
-    #     - HLE (no tools): 21.6%
-    #     - MRCR (Long Context): 91.5% at 128K
-    #     - LMSYS Arena Elo: 1459"""
-    # ),
+        Benchmark Performance (Thinking mode):
+        - GPQA Diamond: 86.4%
+        - AIME 2025: 88.0%
+        - LiveCodeBench: 69.0%
+        - SWE-bench Verified (single attempt): 59.6%
+        - HLE (no tools): 21.6%
+        - MRCR (Long Context): 91.5% at 128K
+        - LMSYS Arena Elo: 1459"""
+    ),
     
-    # "gemini-2.5-flash-lite": ModelSpec(
-    #     name="Gemini 2.5 Flash Lite",
-    #     api_alias="gemini/gemini-2.5-flash-lite",
-    #     provider="google",
-    #     input_price_per_million=0.10,
-    #     output_price_per_million=0.40,
-    #     context_window=1048576,  # 1M tokens
-    #     max_output_tokens=65535,
-    #     capabilities=["reasoning", "coding", "math", "general", "multimodal", "long_context", "high_throughput"],
-    #     quality_tier="budget",
-    #     description="""High-throughput Gemini model optimized for cost-efficiency with an optional, controllable reasoning mode.
+    "gemini-2.5-flash-lite": ModelSpec(
+        name="Gemini 2.5 Flash Lite",
+        api_alias="gemini-2.5-flash-lite",
+        provider="dmxapi",
+        input_price_per_million=0.10,
+        output_price_per_million=0.40,
+        context_window=1048576,  # 1M tokens
+        max_output_tokens=65535,
+        capabilities=["reasoning", "coding", "math", "general", "multimodal", "long_context", "high_throughput"],
+        quality_tier="budget",
+        description="""High-throughput Gemini model optimized for cost-efficiency with an optional, controllable reasoning mode.
         
-    #     Capabilities: Reasoning, coding, math, general, multimodal, long context, high throughput
-    #     Quality: Budget tier optimized for cost and throughput
-    #     Cost: $0.10/M input tokens, $0.40/M output tokens
-    #     Context: 1,048,576 tokens (~1M tokens)
-    #     Max Output: 65,535 tokens
+        Capabilities: Reasoning, coding, math, general, multimodal, long context, high throughput
+        Quality: Budget tier optimized for cost and throughput
+        Cost: $0.10/M input tokens, $0.40/M output tokens
+        Context: 1,048,576 tokens (~1M tokens)
+        Max Output: 65,535 tokens
         
-    #     Best for: High-volume applications and cost-sensitive projects requiring large context, where developers can dynamically enable reasoning for higher quality on specific tasks.
+        Best for: High-volume applications and cost-sensitive projects requiring large context, where developers can dynamically enable reasoning for higher quality on specific tasks.
         
-    #     Benchmark Performance (Non-thinking):
-    #     - MMLU: 90.1%
-    #     - GPQA-Diamond: 68.2%
-    #     - MATH-500: 95.4%
-    #     - AIME 2024: 61.3%
-    #     - SWE-bench Verified (Agentless): 32.6%
-    #     - LiveCodeBench v6: 44.7%
-    #     - IFEval: 84.3%
-    #     - Tau2 (Retail/Airline): 64.3% / 42.5%"""
-    # ),
+        Benchmark Performance (Non-thinking):
+        - MMLU: 90.1%
+        - GPQA-Diamond: 68.2%
+        - MATH-500: 95.4%
+        - AIME 2024: 61.3%
+        - SWE-bench Verified (Agentless): 32.6%
+        - LiveCodeBench v6: 44.7%
+        - IFEval: 84.3%
+        - Tau2 (Retail/Airline): 64.3% / 42.5%"""
+    ),
 }
 
 
@@ -849,6 +849,7 @@ class LLMRouter:
         openai_key = os.getenv("OPENAI_API_KEY")
         together_key = os.getenv("TOGETHER_API_KEY")
         google_key = os.getenv("GEMINI_API_KEY")
+        dmxapi_key = os.getenv("DMXAPI_KEY")
         
         if not openai_key:
             print("WARNING: OPENAI_API_KEY not found. OpenAI models will not work.")
@@ -865,8 +866,13 @@ class LLMRouter:
         else:
             print("✓ GEMINI_API_KEY found")
             
-        if not (openai_key or together_key or google_key):
-            raise ValueError("At least one API key (OPENAI_API_KEY, TOGETHER_API_KEY, or GEMINI_API_KEY) must be set")
+        if not dmxapi_key:
+            print("WARNING: DMXAPI_KEY not found. DMXAPI models will not work.")
+        else:
+            print("✓ DMXAPI_KEY found")
+            
+        if not (openai_key or together_key or google_key or dmxapi_key):
+            raise ValueError("At least one API key (OPENAI_API_KEY, TOGETHER_API_KEY, GEMINI_API_KEY, or DMXAPI_KEY) must be set")
     
     def _estimate_tokens(self, messages: List[Dict[str, str]]) -> int:
         """Rough estimation of token count for cost calculation"""
@@ -939,6 +945,10 @@ class LLMRouter:
             # Ensure Google API key is available for Gemini models
             if os.getenv("GEMINI_API_KEY"):
                 os.environ["GOOGLE_API_KEY"] = os.getenv("GEMINI_API_KEY")
+        elif spec.provider == "dmxapi":
+            params["api_key"] = os.getenv("DMXAPI_KEY", "")
+            params["base_url"] = "https://www.dmxapi.cn/v1"
+            params["custom_llm_provider"] = "openai"
         
         start_time = time.time()
         
@@ -1041,6 +1051,10 @@ class LLMRouter:
             # Ensure Google API key is available for Gemini models
             if os.getenv("GEMINI_API_KEY"):
                 os.environ["GOOGLE_API_KEY"] = os.getenv("GEMINI_API_KEY")
+        elif spec.provider == "dmxapi":
+            params["api_key"] = os.getenv("DMXAPI_KEY", "")
+            params["base_url"] = "https://www.dmxapi.cn/v1"
+            params["custom_llm_provider"] = "openai"
         
         start_time = time.time()
         
@@ -1193,7 +1207,7 @@ async def simple_acall_test():
     """Ultra simple test for acall_model - just tests basic functionality"""
     router = LLMRouter()
     try:
-        response, metadata = await acall_model(router, "gpt-4o", [{"role": "user", "content": "Say hello"}], {"max_tokens": 20})
+        response, metadata = await acall_model(router, "gemini-2.5-flash-lite", [{"role": "user", "content": "Say hello"}], {"max_tokens": 20})
         print(f"✅ acall_model works! Response: {response}")
         return True
     except Exception as e:
@@ -1202,7 +1216,7 @@ async def simple_acall_test():
 
 if __name__ == "__main__":
     import asyncio
-
+    litellm._turn_on_debug()
     # Test async function
     print("\n=== Running Async Test ===")
     asyncio.run(simple_acall_test())
