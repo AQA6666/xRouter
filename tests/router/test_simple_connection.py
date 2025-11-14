@@ -192,6 +192,7 @@ def test_api_keys():
     openai_key = os.getenv("OPENAI_API_KEY")
     together_key = os.getenv("TOGETHER_API_KEY")
     gemini_key = os.getenv("GEMINI_API_KEY")
+    dmxapi_key = os.getenv("DMXAPI_KEY")
     
     keys_found = 0
     
@@ -212,12 +213,18 @@ def test_api_keys():
         keys_found += 1
     else:
         print("  ❌ GEMINI_API_KEY not found")
+
+    if dmxapi_key:
+        print(f"  ✅ DMXAPI_KEY found (ends with: ...{dmxapi_key[-4:]})")
+        keys_found += 1
+    else:
+        print("  ❌ DMXAPI_KEY not found")
     
     if keys_found == 0:
         print("  🚨 No API keys found! Tests will fail.")
         return False
     
-    print(f"  📊 {keys_found}/3 API keys available")
+    print(f"  📊 {keys_found}/4 API keys available")
     print()
     return True
 
@@ -228,7 +235,7 @@ def main():
     
     # Test API keys first
     if not test_api_keys():
-        print("❌ API key check failed. Please set OPENAI_API_KEY and/or TOGETHER_API_KEY")
+        print("❌ API key check failed. Please set ANY of the following API keys: OPENAI_API_KEY, TOGETHER_API_KEY, GEMINI_API_KEY, DMXAPI_KEY")
         return
     
     # Initialize and run tester
