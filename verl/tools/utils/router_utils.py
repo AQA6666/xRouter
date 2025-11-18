@@ -502,7 +502,7 @@ MODEL_SPECS = {
     
     "qwen3-235b-thinking": ModelSpec(
         name="Qwen3 235B Thinking",
-        api_alias="qwen3-235b-a22b-thinking-2507",
+        api_alias="Qwen3-VL-235B-A22B-Thinking",
         provider="dmxapi",
         input_price_per_million=0.65,
         output_price_per_million=3.00,
@@ -533,7 +533,7 @@ MODEL_SPECS = {
     
     "qwen3-coder-480b": ModelSpec(
         name="Qwen3 Coder 480B",
-        api_alias="qwen3-coder-480b-a35b-instruct",
+        api_alias="qwen3-coder-plus",
         provider="dmxapi",
         input_price_per_million=2.00,
         output_price_per_million=2.00,
