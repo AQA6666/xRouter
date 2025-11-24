@@ -5,4 +5,7 @@ from datasets import load_dataset
 train_data = load_dataset("LLM360/guru-RL-92k", split="train", cache_dir="/gemini/space/Datasets/guru-RL-92k")
 
 print(f"Columns: {train_data.column_names}")
-print(f"First item: {next(iter(train_data))}")
+# print the first 10 rows of the dataset
+print(train_data[:10])
+# data length
+print(len(train_data))
