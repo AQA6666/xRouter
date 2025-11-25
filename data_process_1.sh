@@ -14,7 +14,7 @@ python data_preprocess/router_data_preprocess.py \
     --seed 42 \
     --max_system_prompt_length 2000 \
     --output_dir data/train_hard_${date_str} \
-    --input_dir /gemini/space/Datasets/guru-RL-92k \
+    --input_dir /gemini/space/Datasets/guru/train \
     --max_num_samples 400
 
 # Process medium difficulty tasks
@@ -25,5 +25,5 @@ python data_preprocess/router_data_preprocess.py \
     --fixed_set_3_percentage 0.05 \
     --num_repetitions 1 \
     --output_dir data/train_medium_${date_str} \
-    --input_dir /gemini/space/Datasets/guru-RL-92k \
+    --input_dir /gemini/space/Datasets/guru/train \
     --max_num_samples 400
